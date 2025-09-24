@@ -1,0 +1,75 @@
+特征选择报告
+==================================================
+
+原始特征数量: 51
+最终特征数量: 26
+特征减少比例: 49.0%
+
+按类别选中的特征:
+
+时域统计特征 (1个):
+  - freq_rms
+
+时域形状特征 (4个):
+  - kurtosis
+  - spectral_skewness
+  - skewness
+  - margin_factor
+
+频域统计特征 (2个):
+  - spectral_centroid
+  - spectral_spread
+
+频域能量特征 (13个):
+  - BSF_energy_concentration
+  - BPFI_energy_concentration
+  - BPFO_energy_concentration
+  - BPFO_H2_energy
+  - FTF_H3_energy
+  - FTF_H1_energy
+  - log_energy
+  - energy
+  - spectral_entropy
+  - band_1_energy_ratio
+  - band_3_energy_ratio
+  - BPFI_H3_energy
+  - BPFI_H1_energy
+
+调制和冲击特征 (3个):
+  - am_modulation_depth
+  - fm_modulation_index
+  - dynamic_range
+
+其他特征 (3个):
+  - zero_crossing_rate
+  - signal_quality
+  - snr_db
+
+
+最终选中的所有特征:
+ 1. FTF_H3_energy
+ 2. spectral_centroid
+ 3. FTF_H1_energy
+ 4. snr_db
+ 5. spectral_skewness
+ 6. margin_factor
+ 7. band_3_energy_ratio
+ 8. dynamic_range
+ 9. BPFO_H2_energy
+10. zero_crossing_rate
+11. BPFO_energy_concentration
+12. BPFI_energy_concentration
+13. energy
+14. freq_rms
+15. spectral_entropy
+16. fm_modulation_index
+17. kurtosis
+18. log_energy
+19. signal_quality
+20. am_modulation_depth
+21. band_1_energy_ratio
+22. BPFI_H1_energy
+23. BPFI_H3_energy
+24. BSF_energy_concentration
+25. spectral_spread
+26. skewness

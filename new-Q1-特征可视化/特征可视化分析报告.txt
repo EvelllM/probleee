@@ -1,0 +1,97 @@
+特征可视化分析报告
+==================================================
+
+1. 数据基本信息
+------------------------------
+总样本数: 13224
+特征数量: 26
+故障类别: ['B', 'IR', 'N', 'OR']
+各类别样本数:
+  OR: 6384
+  B: 3192
+  IR: 3192
+  N: 456
+
+2. 特征重要性分析
+------------------------------
+Top 10 重要特征:
+   1. snr_db                    0.119453
+   2. dynamic_range             0.100661
+   3. zero_crossing_rate        0.089653
+   4. freq_rms                  0.066128
+   5. am_modulation_depth       0.063248
+   6. energy                    0.060379
+   7. log_energy                0.057990
+   8. margin_factor             0.048615
+   9. kurtosis                  0.045877
+  10. band_1_energy_ratio       0.039532
+
+3. 特征类别分析
+------------------------------
+时域统计特征:
+  特征数量: 1
+  总重要性: 0.067587
+  平均重要性: 0.067587
+  最高重要性: 0.067587
+  包含特征: freq_rms
+
+时域形状特征:
+  特征数量: 4
+  总重要性: 0.132328
+  平均重要性: 0.033082
+  最高重要性: 0.052161
+  包含特征: kurtosis, spectral_skewness, skewness, margin_factor
+
+频域统计特征:
+  特征数量: 2
+  总重要性: 0.043443
+  平均重要性: 0.021722
+  最高重要性: 0.036078
+  包含特征: spectral_centroid, spectral_spread
+
+频域能量特征:
+  特征数量: 13
+  总重要性: 0.327528
+  平均重要性: 0.025194
+  最高重要性: 0.058395
+  包含特征: BSF_energy_concentration, BPFI_energy_concentration, BPFO_energy_concentration, BPFO_H2_energy, FTF_H3_energy, FTF_H1_energy, log_energy, energy, spectral_entropy, band_1_energy_ratio, band_3_energy_ratio, BPFI_H3_energy, BPFI_H1_energy
+
+调制和冲击特征:
+  特征数量: 3
+  总重要性: 0.181934
+  平均重要性: 0.060645
+  最高重要性: 0.103277
+  包含特征: am_modulation_depth, fm_modulation_index, dynamic_range
+
+其他特征:
+  特征数量: 3
+  总重要性: 0.247180
+  平均重要性: 0.082393
+  最高重要性: 0.113716
+  包含特征: zero_crossing_rate, signal_quality, snr_db
+
+4. 特征相关性分析
+------------------------------
+发现 13 对高相关性特征 (|r| > 0.7):
+  spectral_centroid vs snr_db: 0.7264
+  spectral_centroid vs spectral_spread: 0.8337
+  snr_db vs spectral_skewness: 0.8563
+  snr_db vs spectral_spread: 0.7827
+  spectral_skewness vs zero_crossing_rate: -0.8279
+  spectral_skewness vs band_1_energy_ratio: 0.7060
+  margin_factor vs kurtosis: 0.7621
+  margin_factor vs am_modulation_depth: 0.8908
+  zero_crossing_rate vs band_1_energy_ratio: -0.9315
+  energy vs freq_rms: 0.9376
+  energy vs log_energy: 0.7288
+  freq_rms vs log_energy: 0.9139
+  kurtosis vs am_modulation_depth: 0.7985
+
+5. 分析建议
+------------------------------
+基于可视化分析结果的建议:
+1. 重点关注前10个重要特征，它们对故障诊断贡献最大
+2. 频域能量特征类别包含最多特征，是故障诊断的核心
+3. 不同故障类别在重要特征上表现出明显差异，有利于分类
+4. 存在高相关性特征，可考虑进一步特征选择优化
+5. 降维可视化显示特征能够有效区分不同故障类别
